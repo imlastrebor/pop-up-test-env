@@ -1,0 +1,12 @@
+/* Button background color */
+.vfrc-button {
+  background-color: #115A7E !important;
+  color: #FFFFFF !important; /* Button text color */
+  border: none !important;
+}
+
+/* Button hover state */
+.vfrc-button:hover {
+  background-color: #115A7E !important;
+  color: #FFFFFF !important;
+}

@@ -14,17 +14,26 @@ body {
   background-color: #dbeafe;
 }
 
-.page-two {
+.page-herate-1 {
+  background-color: #dbeafe;
+}
+
+.page-herate-2 {
   background-color: #dcfce7;
 }
 
-.page-three {
-  background-color: #fce7f3;
+.page-herate-3 {
+  background-color: #fef3c7;
+}
+
+.page-control {
+  background-color: #f3f4f6;
 }
 
 .nav {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
   padding: 1rem 1.5rem;
   background-color: rgba(255, 255, 255, 0.85);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -39,6 +48,7 @@ body {
   padding: 0.5rem 0.75rem;
   border-radius: 0.375rem;
   font-weight: 500;
+  font-size: 0.875rem;
 }
 
 .nav a:hover {
@@ -50,10 +60,65 @@ body {
   font-weight: 600;
 }
 
+.nav-home {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
 main {
   padding: 3rem 1.5rem;
+  max-width: 48rem;
 }
 
 h1 {
   font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.herate-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.path-info {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-top: 1rem;
+}
+
+.path-info code {
+  background-color: rgba(0, 0, 0, 0.06);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+}
+
+.hub-section {
+  margin-bottom: 2rem;
+}
+
+.hub-section h2 {
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+  color: #374151;
+}
+
+.hub-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hub-links a {
+  color: #1d4ed8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hub-links a:hover {
+  text-decoration: underline;
 }

@@ -1,19 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>TVT Demo</title>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body class="page-home">
   <nav class="nav">
-    <a href="index.html" class="active">Home</a>
-    <a href="page2.html">Page 2</a>
-    <a href="page3.html">Page 3</a>
+    <a href="/" class="nav-home active">Etusivu</a>
+    <a href="/hakijalle/">Hakijalle</a>
+    <a href="/kodit/">Kodit</a>
+    <a href="/asukkaalle/">Asukkaalle</a>
+    <a href="/asukkaalle/muuttaminen/">Muuttaminen</a>
+    <a href="/ajankohtaista/">Ajankohtaista</a>
+    <a href="/ota-yhteytta/">Ota yhteyttä</a>
+    <a href="/tvt-asunnot/">TVT-asunnot</a>
+    <a href="/toimitilat/">Toimitilat</a>
+    <a href="/satunnainen-demo/">Ei herätettä</a>
   </nav>
   <main>
-    <h1>Home</h1>
+    <h1>TVT Demo</h1>
+    <p class="path-info">Herätteiden testaus eri URL-poluilla</p>
+
+    <section class="hub-section">
+      <h2>Heräte 1 — Hakijat</h2>
+      <div class="hub-links">
+        <a href="/hakijalle/">/hakijalle/</a>
+        <a href="/kodit/">/kodit/</a>
+      </div>
+    </section>
+
+    <section class="hub-section">
+      <h2>Heräte 2 — Asukkaat</h2>
+      <div class="hub-links">
+        <a href="/asukkaalle/">/asukkaalle/</a>
+        <a href="/asukkaalle/muuttaminen/">/asukkaalle/muuttaminen/</a>
+      </div>
+    </section>
+
+    <section class="hub-section">
+      <h2>Heräte 3 — Yleinen</h2>
+      <div class="hub-links">
+        <a href="/ajankohtaista/">/ajankohtaista/</a>
+        <a href="/ota-yhteytta/">/ota-yhteytta/</a>
+        <a href="/tvt-asunnot/">/tvt-asunnot/</a>
+        <a href="/toimitilat/">/toimitilat/</a>
+      </div>
+    </section>
+
+    <section class="hub-section">
+      <h2>Ei herätettä</h2>
+      <div class="hub-links">
+        <a href="/satunnainen-demo/">/satunnainen-demo/</a>
+      </div>
+    </section>
   </main>
 
   <!-- Upseller Embed Script -->

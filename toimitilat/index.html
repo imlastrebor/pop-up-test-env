@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toimitilat</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="page-herate-3">
+  <nav class="nav">
+    <a href="/" class="nav-home">Etusivu</a>
+    <a href="/hakijalle/">Hakijalle</a>
+    <a href="/kodit/">Kodit</a>
+    <a href="/asukkaalle/">Asukkaalle</a>
+    <a href="/asukkaalle/muuttaminen/">Muuttaminen</a>
+    <a href="/ajankohtaista/">Ajankohtaista</a>
+    <a href="/ota-yhteytta/">Ota yhteyttä</a>
+    <a href="/tvt-asunnot/">TVT-asunnot</a>
+    <a href="/toimitilat/" class="active">Toimitilat</a>
+    <a href="/satunnainen-demo/">Ei herätettä</a>
+  </nav>
+  <main>
+    <h1>Toimitilat</h1>
+    <p class="herate-badge">Heräte 3 — Yleinen</p>
+    <p class="path-info">Polku: <code id="current-path"></code></p>
+  </main>
+
+  <script>
+    document.getElementById('current-path').textContent = window.location.pathname;
+  </script>
+
+  <!-- Upseller Embed Script -->
+  <script src="https://embed.upseller.cloud/plugin-v5/embed.js" async></script>
+  <script>
+  window['_Up'] = window['_Up'] || {};
+  window['_Up']._UpCId = 'tvtagent';
+  </script>
+  <!-- End Upseller Embed Script -->
+</body>
+</html>
