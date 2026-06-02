@@ -48,6 +48,7 @@
               '/tvt-asunnot/',
               '/toimitilat/'
             ],
+            include_exact: [window.location.origin + '/', window.location.origin],
             payload: { message: 'heräte 3' }
           });
         }, 2000);
