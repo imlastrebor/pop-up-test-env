@@ -28,24 +28,29 @@
           enableFallback: false
         });
 
-        // First message after 2 seconds
+        // Heräte 1–3 proactive messages (URL-scoped via includes)
         setTimeout(() => {
-          window.voiceflow.chat.proactive.push({
+          window.openUpsellerProactive({
             type: 'text',
-            payload: {
-              message: 'Tervetuloa! 👋 Olen Auli, TVT:n tekoälyllä toimiva avustaja.'
-            }
+            includes: ['/hakijalle/', '/kodit/'],
+            payload: { message: 'heräte 1' }
+          });
+          window.openUpsellerProactive({
+            type: 'text',
+            includes: ['/asukkaalle/'],
+            payload: { message: 'heräte 2' }
+          });
+          window.openUpsellerProactive({
+            type: 'text',
+            includes: [
+              '/ajankohtaista/',
+              '/ota-yhteytta/',
+              '/tvt-asunnot/',
+              '/toimitilat/'
+            ],
+            payload: { message: 'heräte 3' }
           });
         }, 2000);
-        // Second message after 8 seconds
-        setTimeout(() => {
-          window.voiceflow.chat.proactive.push({
-            type: 'text',
-            payload: {
-              message: 'Haluatko apua asunnon hakemiseen tai asumiseen liittyvissä asioissa?'
-            }
-          });
-        }, 8000);
       });
   };
   v.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs';
