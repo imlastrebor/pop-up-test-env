@@ -32,12 +32,18 @@
         setTimeout(() => {
           window.openUpsellerProactive({
             type: 'text',
-            includes: ['/hakijalle/', '/kodit/'],
+            includes: [
+              '/hakijalle/',
+              '/kodit/'
+            ],
             payload: { message: 'heräte 1' }
           });
           window.openUpsellerProactive({
             type: 'text',
-            includes: ['/asukkaalle/'],
+            includes: [
+              '/asukkaalle/',
+              '/asukkaalle/muuttaminen/'
+            ],
             payload: { message: 'heräte 2' }
           });
           window.openUpsellerProactive({
@@ -48,6 +54,10 @@
               '/tvt-asunnot/',
               '/toimitilat/',
               '/'
+            ],
+            include_exact: [
+              window.location.origin + '/',
+              window.location.origin
             ],
             payload: { message: 'heräte 3' }
           });
