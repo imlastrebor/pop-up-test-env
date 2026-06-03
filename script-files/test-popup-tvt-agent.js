@@ -29,25 +29,46 @@
         });
 
         // Heräte 1–3 proactive messages (URL-scoped via includes)
+        var popupButtons = [
+          { text: 'Avaa keskustelu', name: 'open_chat', ariaLabel: 'Avaa keskustelu' },
+          {
+            text: '🇸🇪 🇬🇧 🇫🇷 🇪🇸 🇩🇪 🇺🇦 Other languages',
+            name: 'other_languages',
+            ariaLabel: 'Valitse kieli / Other languages'
+          }
+        ];
+
         setTimeout(() => {
           window.openUpsellerProactive({
-            type: 'text',
+            type: 'up_custom_simple',
             includes: [
               '/hakijalle/',
               '/kodit/'
             ],
-            payload: { message: 'heräte 1' }
+            payload: {
+              ariaLabel: 'Vuokra-asunnon haku',
+              message:
+                '<p>Hei! 👋 Haluatko vuokrata asunnon?</p>' +
+                '<p>Etsitkö asuntoa tai kaipaatko apua asunnon hakemiseen?</p>',
+              buttons: popupButtons
+            }
           });
           window.openUpsellerProactive({
-            type: 'text',
+            type: 'up_custom_simple',
             includes: [
               '/asukkaalle/',
               '/asukkaalle/muuttaminen/'
             ],
-            payload: { message: 'heräte 2' }
+            payload: {
+              ariaLabel: 'Apua asumiseen',
+              message:
+                '<p>Hei asukkaamme! 🙂</p>' +
+                '<p>Kaipaatko apua kodin ja asumisen asioissa?</p>',
+              buttons: popupButtons
+            }
           });
           window.openUpsellerProactive({
-            type: 'text',
+            type: 'up_custom_simple',
             includes: [
               '/ajankohtaista/',
               '/ota-yhteytta/',
@@ -59,7 +80,14 @@
               window.location.origin + '/',
               window.location.origin
             ],
-            payload: { message: 'heräte 3' }
+            payload: {
+              ariaLabel: 'TVT Asuntojen avustaja Auli',
+              message:
+                '<p>Hei!</p>' +
+                '<p>Olen TVT Asuntojen tekoäly avustaja Auli.</p>' +
+                '<p>Tarvitsetko apua? Kysy minulta – autan 24/7.</p>',
+              buttons: popupButtons
+            }
           });
         }, 2000);
       });
