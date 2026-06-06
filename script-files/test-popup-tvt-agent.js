@@ -74,12 +74,11 @@
               '/ota-yhteytta/',
               '/tvt-asunnot/',
               '/toimitilat/',
-              '/'
             ],
-            include_exact: [
-              window.location.origin + '/',
-              window.location.origin
-            ],
+            // include_exact: [
+            //   window.location.origin + '/',
+            //   window.location.origin
+            // ],
             payload: {
               ariaLabel: 'TVT Asuntojen avustaja Auli',
               message:

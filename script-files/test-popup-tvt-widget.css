@@ -10,3 +10,14 @@
   background-color: #115A7E !important;
   color: #FFFFFF !important;
 }
+
+.vfrc-proactive__card.up_custom_simple .up-popup-buttons button {
+  color: #115a7e;
+  border: solid 2px #115a7e;
+  border-radius: 2px;
+  font-weight: 600;
+  background-color: #ffffff;
+}
+.vfrc-proactive__card.up_custom_simple .up-popup-buttons button:hover {
+    background-color: #f3f3f3;
+}
