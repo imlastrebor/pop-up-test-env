@@ -1,23 +1,25 @@
-/* Button background color */
-.vfrc-button {
-  background-color: #115A7E !important;
-  color: #FFFFFF !important; /* Button text color */
-  border: none !important;
-}
-
-/* Button hover state */
-.vfrc-button:hover {
-  background-color: #115A7E !important;
-  color: #FFFFFF !important;
-}
-
 .vfrc-proactive__card.up_custom_simple .up-popup-buttons button {
-  color: #115a7e;
-  border: solid 2px #115a7e;
-  border-radius: 2px;
-  font-weight: 600;
-  background-color: #ffffff;
+  background-color: #115a7e !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 24px !important;
+  font-weight: 500 !important;
+  padding: 12px 16px !important;
 }
 .vfrc-proactive__card.up_custom_simple .up-popup-buttons button:hover {
-    background-color: #f3f3f3;
+  background-color: #0d4a66 !important;
+}
+
+
+.vfrc-proactive__card.up_custom_simple .up-popup-wrapper {
+  text-align: left !important;
+}
+
+.vfrc-proactive__card.up_custom_simple .up-popup-buttons {
+  flex-direction: column !important;
+}
+
+.up-popup-message p:first-of-type {
+  font-family: inherit !important;
+  font-weight: bold !important;
 }
