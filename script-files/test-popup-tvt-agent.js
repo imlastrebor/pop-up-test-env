@@ -13,8 +13,10 @@
           url: 'https://runtime-api.voiceflow.com'
         },
         assistant: {
-            persistence: 'localStorage'
-        }
+          persistence: 'localStorage',
+          stylesheet:
+  "https://embed.upseller.cloud/plugin-v5/clients/test-popup-tvt-widget.css",
+      }
       })
       .then(() => {
 
@@ -29,10 +31,7 @@
         });
 
         // Heräte 1–3 proactive messages (URL-scoped)
-        var popupButtons = [
-          { text: 'Avaa keskustelu', name: 'open_chat', ariaLabel: 'Avaa keskustelu' },
-          { text: 'Open conversation', name: 'open_chat_en', ariaLabel: 'Open conversation' }
-        ];
+
 
         setTimeout(() => {
           // Heräte 1 – hakijat
@@ -45,10 +44,14 @@
             payload: {
               ariaLabel: 'Vuokra-asunnon haku',
               message:
-                '<p>Hei! 👋 Haluatko vuokrata asunnon?</p>' +
+                '<p><strong>Hei! 👋 Haluatko vuokrata asunnon?</strong></p>' +
                 '<p>Etsitkö asuntoa tai kaipaatko apua asunnon hakemiseen?</p>' +
                 '<p>Looking for an apartment – ask me a question.</p>',
-              buttons: popupButtons
+                
+              buttons: [
+                {text: 'Avaa keskustelu', name: 'open_chat', ariaLabel: 'Avaa keskustelu'},
+              {text: 'Open conversation', name: 'open_chat_en', ariaLabel: 'Open conversation'}
+            ]
             }
           });
           // Heräte 2 – asukkaat ('/asukkaalle/' kattaa myös alasivut)
@@ -60,10 +63,13 @@
             payload: {
               ariaLabel: 'Apua asumiseen',
               message:
-                '<p>Hei asukkaamme! 🙂</p>' +
+                '<p><strong>Hei asukkaamme! 🙂</strong></p>' +
                 '<p>Kaipaatko apua kodin ja asumisen asioissa?</p>' +
                 '<p>Do you need help with home and housing matters?</p>',
-              buttons: popupButtons
+                buttons: [
+                  {text: 'Avaa keskustelu', name: 'open_chat', ariaLabel: 'Avaa keskustelu'},
+                {text: 'Open conversation', name: 'open_chat_en', ariaLabel: 'Open conversation'}
+              ]
             }
           });
           // Heräte 3 – yleinen, kaikki muut sivut (myös etusivu)
@@ -79,9 +85,11 @@
               message:
                 '<p>Hei!</p>' +
                 '<p>Olen TVT Asuntojen tekoälyavustaja Auli.</p>' +
-                '<p>Tarvitsetko apua? Kysy minulta – autan 24/7.</p>' +
-                '<p>Do you need help? Ask me – I\'m here 24/7.</p>',
-              buttons: popupButtons
+                '<p>Tarvitsetko apua? Kysy minulta – autan 24/7.</p>',
+                buttons: [
+                  {text: 'Avaa keskustelu', name: 'open_chat', ariaLabel: 'Avaa keskustelu'},
+                {text: 'Open conversation', name: 'open_chat_en', ariaLabel: 'Open conversation'}
+              ]
             }
           });
         }, 2000);
