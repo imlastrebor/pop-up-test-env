@@ -6,10 +6,6 @@
   <title>Hakijalle</title>
   <link rel="stylesheet" href="/styles.css">
 
-  <script>
-    document.getElementById('current-path').textContent = window.location.pathname;
-  </script>
-
   <!-- Upseller Embed Script -->
   <script src="https://embed.upseller.cloud/plugin-v5/embed.js" async></script>
   <script>
@@ -29,7 +25,7 @@
     <a href="/ota-yhteytta/">Ota yhteyttä</a>
     <a href="/tvt-asunnot/">TVT-asunnot</a>
     <a href="/toimitilat/">Toimitilat</a>
-    <a href="/satunnainen-demo/">Ei herätettä</a>
+    <a href="/satunnainen-demo/">Satunnainen sivu</a>
   </nav>
   <main>
     <h1>Hakijalle</h1>
@@ -37,6 +33,8 @@
     <p class="path-info">Polku: <code id="current-path"></code></p>
   </main>
 
- 
+  <script>
+    document.getElementById('current-path').textContent = window.location.pathname;
+  </script>
 </body>
 </html>
